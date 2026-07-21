@@ -43,6 +43,8 @@ let i = 0;
 openBtn.onclick = () => {
   letterSection.style.display = "block";
   openBtn.style.display = "none";
+  music.play().catch(() => {});
+  
 
   function type() {
     if (i < letter.length) {
