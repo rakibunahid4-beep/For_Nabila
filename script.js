@@ -64,3 +64,16 @@ window.onload = () => {
     document.querySelector(".loading").style.display = "none";
   }, 1800);
 };
+const music = document.getElementById("bgMusic");
+
+function toggleMusic() {
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
+}
+
+openBtn.addEventListener("click", () => {
+  music.play().catch(() => {});
+});
